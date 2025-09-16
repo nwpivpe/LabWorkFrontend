@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Зворотній зв’язок</title>
+    <link rel="stylesheet" href="statick/styles/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Сервіс пошиття одягу</h1>
+            <img src="statick/image/logoLab.png" alt="Логотип" width="120">
+        </div>
+    </header>
+
+    <section class="form">
+        <div class="container">
+            <h2>Форма зворотного зв’язку</h2>
+            <form>
+                <fieldset>
+                    <legend>Персональна інформація</legend>
+                    <label>Прізвище та ім’я: <input type="text" name="fullname" required></label><br><br>
+                    <label>E-mail: <input type="email" name="email" required></label><br><br>
+                    <label>Вік: <input type="number" name="age" min="10" max="100" required></label>
+                </fieldset>
+                <br>
+        
+                <label>Мета зворотнього зв’язку:
+                    <select name="purpose">
+                        <option>Співпраця</option>
+                        <option>Скарга на неякісний пошив</option>
+                        <option>Пропозиція</option>
+                        <option>Наявність помилки</option>
+                    </select>
+                </label>
+                <br><br>
+        
+                <label>Детально:<br>
+                    <textarea name="details" rows="5" cols="40" maxlength="300"></textarea>
+                </label>
+                <br><br>
+        
+                <label><input type="checkbox" required> Згоден на обробку персональних даних</label>
+                <br><br>
+        
+                <button type="submit">Відправити</button>
+                <button type="reset">Очистити</button>
+            </form>
+        </div>
+    </section>
+    <footer class="footer__Catalog">
+        <br>
+        <button onclick="location.href='index.html'">На головну</button>
+    </footer>
+</body>
+</html>
