@@ -1,0 +1,134 @@
+html{
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #fdfdfd;
+}
+.container {
+    max-width: 1220px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+h1, h2 {
+    margin: 10px 0;
+    color: #333;
+}
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color:rgb(38, 38, 38);
+    font-weight: bold;
+}
+nav a:hover {
+    color: #ec2b2b;
+    border-bottom: 0.5px solid black;
+}
+
+.header__top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #f3f3f3;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 10px 0;
+}
+.header__top article {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.title__header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #222;
+}
+   /* мета */
+.Meta__info {
+    margin: 0; 
+    padding: 20px;
+    background: #fafafa;
+    border: 1px solid #ddd;
+    margin-top: 100px; 
+}
+.Meta__info h2::before {
+    content: "🧵 "; 
+}
+ol {
+    padding-left: 20px;
+}
+
+    /* таблиця */
+table {
+    width: 100%;
+    border-collapse: collapse; /* межі зливаються */
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background: #eee;
+}
+
+table:hover {
+    transform: translateY(2vh);
+}
+
+    /* футер */
+.footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+.footer__info p {
+    margin: 5px 0;
+    transition: font-size 0.3s ease;
+}
+
+.footer__info p:hover {
+    animation: growText 0.3s forwards;
+    animation-delay: 2s;
+}
+
+@keyframes growText {
+    from { font-size: 1em; } /* стартовий розмір */
+    to { font-size: 1.2em; } /* кінцевий розмір */
+}
+
+.footer__btn {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__btn button {
+    background: #a63d40;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.footer__btn button:hover {
+    background: #872d30;
+}
