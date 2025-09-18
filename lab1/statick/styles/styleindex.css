@@ -98,6 +98,7 @@ table:hover {
 }
 
 .footer__info p {
+    cursor: pointer;
     margin: 5px 0;
     transition: font-size 0.3s ease;
 }
@@ -119,6 +120,7 @@ table:hover {
 }
 
 .footer__btn button {
+    
     background: #a63d40;
     border: none;
     color: #fff;

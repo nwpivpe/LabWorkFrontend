@@ -1,14 +1,10 @@
-html{
+/* Базові налаштування */
+html {
     box-sizing: border-box;
 }
 
-*,
-*::after,
-*::before{
+*, *::after, *::before {
     box-sizing: inherit;
-}
-img{
-    max-width: 300px;
 }
 
 body {
@@ -24,14 +20,20 @@ body {
     margin: 0 auto;
 }
 
+img {
+    max-width: 100%;
+    border-radius: 4px;
+    transition: filter 0.5s ease;
+}
 
+/* Хедер */
 .header__catalog {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     background: #f3f3f3;
-    padding: 10px 0;
+    padding: 10px 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     display: flex;
     justify-content: space-between;
@@ -39,65 +41,69 @@ body {
     z-index: 1000;
 }
 
+/* Основний блок */
 .main__catalog {
-    margin-top: 130px;
+    margin-top: 130px; /* відступ під хедер */
 }
 
+/* Список сервісів */
 .services {
     list-style: none;
     padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 
+/* Картка сервісу */
 .services li {
-    border-top: 2px dotted #b8860b;       
-    border-bottom: 3px solid #b8860b;     
+    background: #fff8dc;
+    border-top: 3px dotted #b8860b;
+    border-bottom: 3px solid #b8860b;
     border-left: 2px solid #b8860b;
     border-right: 2px solid #b8860b;
     border-radius: 6px;
     padding: 15px;
-    margin-bottom: 20px;
-    background: #fff8dc;
-    transition: transform 0.3s ease;
-}
-.services li div{
-    display: flex;
-    flex-flow: column;
-    font-size: larger;
-    border: 2px solid #b8860b;
-    border-radius: 6px;
-    margin-bottom: 10px;
-    gap: 10px;
-    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .services li:hover {
     transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-
-.services img {
-    border-radius: 4px;
-    transition: filter 0.5s ease;
+/* Вміст картки */
+.services li div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+    border: 2px solid #b8860b;
+    border-radius: 6px;
+    font-size: larger;
 }
 
-.services img:focus {
+/* Зображення */
+.services img:focus,
+.services img:hover {
     filter: grayscale(100%);
     outline: none;
 }
 
-
+/* Тип тканини */
 .fabric {
     font-weight: bold;
     font-size: 1.1em;
     font-style: italic;
 }
 
-
+/* Посилання */
 a:active {
     color: darkgreen;
     text-decoration: none;
 }
 
+/* Футер */
 footer {
     background: #f3f3f3;
     padding: 15px 0;
@@ -114,5 +120,3 @@ footer a {
 footer a:hover {
     color: #a63d40;
 }
-
-
